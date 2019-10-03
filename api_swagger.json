@@ -1,0 +1,86 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "591api",
+    "version": "1.0.0",
+    "title": "591_flask_api"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "house Request",
+      "description": " API for requesting and return house requests"
+    }
+  ],
+  "paths": {
+    "/request": {
+      "get": {
+        "tags": [
+          "house Request"
+        ],
+        "summary": "Returns houseRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+                "type":"object",
+                "items":{
+                    "properties":{
+                        "出租者":{
+                            "type":"keyword"
+                        },
+                        "出租者身份":{
+                            "type":"keyword"
+                        },
+                        "地址":{
+                            "type":"keyword"
+                        },
+                        "坪數":{
+                            "type":"double"
+                        },
+                        "型態":{
+                            "type":"keyword"
+                        },
+                        "性別要求":{
+                            "type":"keyword"
+                        },
+                        "房屋名稱":{
+                            "type":"keyword"
+                        },
+                        "押金":{
+                            "type":"keyword"
+                        },
+                        "最短租期":{
+                            "type":"keyword"
+                        },
+                        "樓層":{
+                            "type":"keyword"
+                        },
+                        "現況":{
+                            "type":"keyword"
+                        },
+                        "租金":{
+                            "type":"long"
+                        },
+                        "聯絡電話":{
+                            "type":"keyword"
+                        },
+                        "身份要求":{
+                            "type":"keyword"
+                        },
+                        "車位":{
+                            "type":"keyword"
+                        }
+                    }
+                
+                }              
+            }
+          }
+        }
+      }
+    }
+}
